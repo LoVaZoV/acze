@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Actor</title>
+</head>
+<body>
+  <h1>удаление актера</h1>
+  <p>Вы точно хотите удалить актера {{actor.name}}?</p>
+  <form action="/actors/{{actor.id}}" method="post">
+    <button type="submit">Delete</button>
+  </form>
+     <a href="/actors">список фильмов</a>
+</body>
+</html>

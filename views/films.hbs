@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/films.css">
+	</head>
+	<body>
+		<h1>Films</h1>
+		<ul>
+			{{#each films}}
+				<li>
+					{{#with this}}
+						<p>Название: {{title}}</p>
+						<p>год: {{year}}</p>
+						<p>режиссер: {{director.name}}</p>
+					{{/with}}
+				</li>
+			{{/each}}
+		</ul>
+	</body>
+</html>

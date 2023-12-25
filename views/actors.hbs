@@ -1,0 +1,21 @@
+<!-- actors.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actors List</title>
+</head>
+<body>
+  <h1>Список актеров</h1>
+  <ul>
+    {{#each actors}}
+      <li>{{this.name}}</li>
+    {{/each}}
+
+    	<form action="/actors" method="post" enctype="application/json">
+      <input type="text" placeholder="type name" name="name">
+      <button type="submit">Submit</button>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/directors.css">
+	</head>
+	<body>
+		<h1>Directors</h1>
+		<ul>
+			{{#each directors}}
+				<li>
+					{{#with this}}
+						<p>{{name}}</p>
+						<ul>
+							{{#each films}}
+								<li>{{this.title}}</li>
+							{{/each}}
+						</ul>
+					{{/with}}
+				</li>
+			{{/each}}
+		</ul>
+        <br><br>
+			<form action="/directors" method="post" enctype="application/json">
+      <input type="text" placeholder="type name" name="name">
+      <button type="submit">Submit</button>
+    </form>
+	</body>
+</html>

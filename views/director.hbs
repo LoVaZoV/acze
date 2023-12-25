@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>{{director.name}}</p>
+  <br><br><br>
+  <form action="/directors/{{director.id}}" method="post" enctype="application/json">
+    <input type="text" name="name" value="{{director.name}}">
+    <select name="directorId" id="">
+      {{#each directors}}
+        <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
